@@ -46,7 +46,7 @@ export default defineConfig((ctx) => {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-file#build
     build: {
-      publicPath: 'https://github.com/avilainee/photo-memoria.git',
+      publicPath: '/photo-memoria/',
       vueRouterMode: 'hash', // available values: 'hash', 'history'
 
       // webpackTranspile: false,
