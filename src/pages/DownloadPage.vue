@@ -1,38 +1,40 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="column justify-center">
     <div class="blurred-bg"></div>
-    <div class="q-gutter-y-md column">
-    </div>
-      
-    <div>
-      <div ref="captureArea" class="flex flex-center">
+    <div class="flex flex-center">
+      <div ref="captureArea">
         <div class="capture-card bg-white">
           <div class="pic-grid">
-            <div v-for="(pic, index) in capturedImages" :key="index" class="pic-item" style="height: 120px">
-              <img v-if="pic" :src="pic" class="pic-container mirrored" style="height: inherit"/>
+            <div
+              v-for="(pic, index) in capturedImages"
+              :key="index"
+              class="pic-item"
+              style="height: 120px"
+            >
+              <img v-if="pic" :src="pic" class="pic-container mirrored" style="height: inherit" />
             </div>
           </div>
         </div>
       </div>
-      <div class="row justify-center q-mt-lg">
-        <q-btn
-          color="dark"
-          label="Return to Capture"
-          class="q-mx-lg"
-          :size="'lg'"
-          no-caps
-          :to="{ path: '/capture' }"
-        />
-        <q-btn
-          color="amber-10"
-          label="Download as JPG"
-          class="q-mx-lg"
-          :size="'lg'"
-          unelevated
-          no-caps
-          @click="downloadImage"
-        />
-      </div>
+    </div>
+    <div class="flex flex-center">
+      <q-btn
+        color="dark"
+        label="Return to Capture"
+        class="q-mx-lg q-mt-md"
+        :size="'lg'"
+        no-caps
+        :to="{ path: '/capture' }"
+      />
+      <q-btn
+        color="amber-10"
+        label="Download as JPG"
+        class="q-mx-lg q-mt-md"
+        :size="'lg'"
+        unelevated
+        no-caps
+        @click="downloadImage"
+      />
     </div>
   </q-page>
 </template>
@@ -68,7 +70,6 @@ const downloadImage = async () => {
   }
 }
 </script>
-
 
 <style>
 .q-page {

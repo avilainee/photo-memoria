@@ -28,7 +28,7 @@
         <q-card class="q-px-lg text-amber-10">{{ countdown }}</q-card>
       </div>
       <div class="col-12 col-md-2 col-sm-8">
-        <div class="row q-col-gutter-sm q-pa-sm">
+        <div class="row q-col-gutter-sm q-pa-">
           <div v-for="(image, index) in capturedImages" :key="index" class="col-6 col-md-9 col-sm-6">
             <img v-if="image" :src="image" class="image-container mirrored" />
           </div>
