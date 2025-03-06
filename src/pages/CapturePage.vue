@@ -1,40 +1,36 @@
 <template>
   <q-page class="flex flex-center">
+    <div class="blurred-bg"></div>
     <div class="row full-width justify-center q-pa-xl">
       <div class="col-6 q-mx-xl flex justify-center">
         <video ref="camera" autoplay class="full-width camera-container mirrored"></video>
         <canvas ref="canvas" style="display: none"></canvas>
         <q-btn
           v-if="capturedImages.length === 0 || capturedImages.length === 4"
-          color="primary"
-          :label="capturedImages.length === 0 ? 'Let\'s take a photo!' : 'Retake'"
+          color="amber-10"
+          :label="capturedImages.length === 0 ? 'Let\'s take a photo!' : 'Retake all'"
           class="q-my-xl q-px-lg"
           :size="'lg'"
           no-caps
-          rounded
           @click="resetAndStartPhotoSequence"
         />
-        <q-btn v-if="capturedImages.length === 4"
-          color="primary"
+        <q-btn
+          v-if="capturedImages.length === 4"
+          color="dark"
           label="Next"
           class="q-my-xl q-ml-lg q-px-lg"
           :size="'lg'"
           no-caps
-          rounded
           :to="{ path: '/download', query: { images: JSON.stringify(capturedImages) } }"
         />
       </div>
       <div v-if="countdown > 0" class="countdown">
-        <q-card class="q-px-lg">{{ countdown }}</q-card>
+        <q-card class="q-px-lg text-amber-10">{{ countdown }}</q-card>
       </div>
       <div class="col-2">
         <div class="row" v-for="(image, index) in capturedImages" :key="index">
           <div class="col q-mr-xl">
-            <img
-              v-if="image"
-              :src="image"
-              class="image-container mirrored"
-            />
+            <img v-if="image" :src="image" class="image-container mirrored" />
           </div>
         </div>
       </div>
@@ -103,11 +99,26 @@ export default {
 
       this.capturedImages.push(canvas.toDataURL('image/png'))
     },
+    setBackground(color) {
+      this.backgroundColor = color
+    },
   },
 }
 </script>
 
 <style>
+.blurred-bg {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  background: radial-gradient(circle, rgb(255, 115, 0, 0.5), rgba(0, 0, 0, 0));
+  filter: blur(100px);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 video {
   object-fit: cover;
 }
@@ -117,14 +128,14 @@ video {
 }
 
 .camera-container {
-  border: 4px solid #1976d2;
+  border: 4px solid #1d1d1d;
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
 }
 
 .image-container {
-  border: 4px solid #1976d2;
+  border: 4px solid #1d1d1d;
   border-radius: 16px;
   overflow: hidden;
   width: 100%;
