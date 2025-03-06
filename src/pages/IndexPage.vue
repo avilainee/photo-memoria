@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col q-ma-xl">
         <q-card unelevated>
-          <q-card-section> asdsfdaf ds </q-card-section>
+          <q-card-section> WALA PANG WELCOME HAHAHA </q-card-section>
         </q-card>
         <q-btn color="dark" label="Let's take a photo!" class="q-ma-xl" :to="{ path: '/capture' }" unelevated no-caps />
       </div>
