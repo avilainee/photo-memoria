@@ -74,6 +74,11 @@ export default defineConfig((ctx) => {
       // chainWebpack (/* chain, { isClient, isServer } */) {}
     },
 
+    htmlVariables: {
+      productName: 'Photo Memoria',
+      productDescription: 'Capture and cherish your favorite memories.'
+    },
+
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-file#devserver
     devServer: {
       server: {
