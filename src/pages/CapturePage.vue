@@ -2,7 +2,7 @@
   <q-page class="flex flex-center">
     <div class="blurred-bg"></div>
     <div class="row full-width justify-center q-pa-xl">
-      <div class="col-6 q-mx-xl flex justify-center">
+      <div class="col-12 col-md-6 col-sm-8 q-mx-xl flex justify-center">
         <video ref="camera" autoplay class="full-width camera-container mirrored"></video>
         <canvas ref="canvas" style="display: none"></canvas>
         <q-btn
@@ -27,9 +27,9 @@
       <div v-if="countdown > 0" class="countdown">
         <q-card class="q-px-lg text-amber-10">{{ countdown }}</q-card>
       </div>
-      <div class="col-2">
-        <div class="row" v-for="(image, index) in capturedImages" :key="index">
-          <div class="col q-mr-xl">
+      <div class="col-12 col-md-2 col-sm-8">
+        <div class="row q-col-gutter-sm">
+          <div v-for="(image, index) in capturedImages" :key="index" class="col-6 col-md-9 col-sm-6">
             <img v-if="image" :src="image" class="image-container mirrored" />
           </div>
         </div>
