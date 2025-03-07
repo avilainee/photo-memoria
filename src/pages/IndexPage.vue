@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col q-ma-xl">
         <q-card unelevated>
-          <img src="/photo-memoria/icons/logo-128x128.png">
+          <img href=/photo-memoria/icons/logo-128x128.png>
         </q-card>
         <q-btn color="dark" label="Let's take a photo!" class="q-ma-xl" :to="{ path: '/capture' }" unelevated no-caps />
       </div>
