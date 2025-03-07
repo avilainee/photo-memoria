@@ -3,9 +3,9 @@
     <div class="blurred-bg"></div>
     <div class="row">
       <div class="col q-ma-xl">
-        <q-card unelevated>
+        <!--<q-card unelevated>
           <img href=/photo-memoria/icons/logo-128x128.png>
-        </q-card>
+        </q-card>-->
         <q-btn color="dark" label="Let's take a photo!" class="q-ma-xl" :to="{ path: '/capture' }" unelevated no-caps />
       </div>
     </div>
