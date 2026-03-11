@@ -6,14 +6,21 @@
         <!--<q-card unelevated>
           <img href=/photo-memoria/icons/logo-128x128.png>
         </q-card>-->
-        <q-btn color="dark" label="Let's take a photo!" class="q-ma-xl" :to="{ path: '/capture' }" unelevated no-caps />
+        <q-btn
+          color="dark"
+          label="Let's take a photo!"
+          class="q-ma-xl"
+          :to="{ path: '/capture' }"
+          unelevated
+          no-caps
+        />
       </div>
     </div>
   </q-page>
 </template>
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
 }
 </script>
 <style>
@@ -21,7 +28,7 @@ export default {
   position: absolute;
   width: 50%;
   height: 70%;
-  background: radial-gradient(circle, rgb(255, 115, 0, 0.5), rgba(0, 0, 0, 0));
+  background: radial-gradient(circle, rgb(73, 17, 28, 1), rgba(0, 0, 0, 0));
   filter: blur(100px);
   z-index: -1;
   top: 50%;
