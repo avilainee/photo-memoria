@@ -3,6 +3,7 @@
     <div class="blurred-bg"></div>
     <div class="row">
       <div class="col q-ma-xl">
+        <div class="text-h1">MEMORIA</div>
         <!--<q-card unelevated>
           <img href=/photo-memoria/icons/logo-128x128.png>
         </q-card>-->
