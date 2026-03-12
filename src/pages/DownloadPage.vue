@@ -1,6 +1,5 @@
 <template>
   <q-page class="column justify-center">
-    <div class="blurred-bg"></div>
     <div class="flex flex-center">
       <div ref="captureArea">
         <div class="capture-card bg-white">
@@ -27,7 +26,7 @@
         :to="{ path: '/capture' }"
       />
       <q-btn
-        color="amber-10"
+        color="primary"
         label="Download as JPG"
         class="q-mx-lg q-mt-md"
         :size="'lg'"
@@ -51,6 +50,7 @@ const captureArea = ref(null)
 onMounted(() => {
   if (route.query.images) {
     capturedImages.value = JSON.parse(route.query.images)
+    console.log(capturedImages.value)
   }
 })
 

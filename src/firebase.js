@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAntYVfDTt73Kngy3QUeDo6RTtgvdbeNz0",
+  apiKey: "",
   authDomain: "photo-memoria.firebaseapp.com",
   projectId: "photo-memoria",
   storageBucket: "photo-memoria.appspot.com",

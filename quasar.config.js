@@ -72,6 +72,25 @@ export default defineConfig((ctx) => {
       // https://v2.quasar.dev/quasar-cli-webpack/handling-webpack
       // "chain" is a webpack-chain object https://github.com/sorrycc/webpack-chain
       // chainWebpack (/* chain, { isClient, isServer } */) {}
+      head: {
+        // Add the preconnect links for better performance
+        link: [
+          {
+            rel: 'preconnect',
+            href: 'https://fonts.googleapis.com',
+          },
+          {
+            rel: 'preconnect',
+            href: 'https://fonts.gstatic.com',
+            crossorigin: true,
+          },
+          // The main Google Fonts link for Manrope
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap', 
+          },
+        ],
+      },
     },
 
     htmlVariables: {

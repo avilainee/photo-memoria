@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <q-page-container>
+    <q-page-container class="fit-page">
       <router-view />
     </q-page-container>
 
@@ -11,3 +11,9 @@
 <script setup>
 
 </script>
+
+<style>
+.fit-page {
+  overflow: hidden !important; /* disable scrolling */
+}
+</style>
