@@ -2,3 +2,13 @@
 body {
   font-family: 'Manrope', sans-serif;
 }
+@media (max-width: $breakpoint-xs-max){
+  .text-h1{font-size: 60px;line-height: 60px;letter-spacing: normal;}
+  .text-h3{font-size: 25px;line-height: 25px;letter-spacing: normal;}
+  .text-h5{font-size: 20px;line-height: 20px;letter-spacing: normal;}
+  .mobile-hide{display: none;}
+  .button-xs{font-size: 15px !important;}
+  .text-caption{font-size: 10px;line-height: 10px;}
+  .q-py-mobile{padding: 10% 0%;}
+  .q-pb-mobile{padding-bottom: 10%;}
+}
